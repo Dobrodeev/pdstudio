@@ -21,17 +21,16 @@ while ($row = $shedule->fetch())
 {
     $arr[]=$row;
 }
-//
 $prices = $db_conn->query('SELECT * FROM prices');
 while ($row_prices = $prices->fetch())
 {
     $arr_prices[]=$row_prices;
 }
-echo var_dump($arr_prices);
-echo '<br><br>';
+//echo var_dump($arr_prices);
+//echo '<br><br>';
 //echo var_dump($row_prices);
 ?>
-<h3>Расписание</h3>
+<!-- <h4>Расписание</h4> -->
 <table class="table table-striped table-bordered table-hover">
     <thead>
     <tr>
