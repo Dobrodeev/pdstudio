@@ -26,11 +26,7 @@ while ($row_prices = $prices->fetch())
 {
     $arr_prices[]=$row_prices;
 }
-//echo var_dump($arr_prices);
-//echo '<br><br>';
-//echo var_dump($row_prices);
 ?>
-<!-- <h4>Расписание</h4> -->
 <table class="table table-striped table-bordered table-hover">
     <thead>
     <tr>
@@ -63,13 +59,11 @@ while ($row_prices = $prices->fetch())
 <h3>Цены</h3>
 <table class="table table-striped table-bordered">
     <thead>
-
     </thead>
     <tbody>
     <? foreach ($arr_prices as $row_prices):?>
         <tr>
             <td><?=$row_prices['name_lesson']?></td><td><?=$row_prices['price_lesson']?> грн</td>
-            <? //echo var_dump($row_prices); ?>
         </tr>
     <? endforeach;?>
     </tbody>

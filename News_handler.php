@@ -13,7 +13,6 @@ include('News.php');
 include('const.php');
 
 $news = new News;
-// $name_ofnew, $name_description, $link_img
 $form_type = $_POST['type'];
 $name_ofnew = $_POST['name_ofnew'];
 $name_description = $_POST['name_description'];

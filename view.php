@@ -21,7 +21,6 @@ while ($row = $shedule->fetch())
 {
     $arr[]=$row;
 }
-//echo var_dump($arr[0]);
 ?>
 <table class="table table-striped table-bordered table-hover">
     <thead>

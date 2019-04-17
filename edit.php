@@ -19,9 +19,7 @@
   include('const.php');
   $db_conn = new PDO('mysql:host=localhost;dbname=' . DB_CONNECTION_DB, DB_CONNECTION_USER, DB_CONNECTION_PASS);
   $shedule = $db_conn->query('SELECT * FROM shedule WHERE id='.$id);
-  //echo var_dump($shedule);
   $row = $shedule->fetch();
-  //echo var_dump($row);
   ?>
   <form action='edit_handler.php'>
   <table class="table table-striped table-bordered table-hover">
