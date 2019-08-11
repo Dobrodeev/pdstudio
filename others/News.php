@@ -6,7 +6,7 @@
  * Date: 19.12.2017
  * Time: 23:54
  */
-require_once ("Controller.php");
+require_once("Controller.php");
 class News extends Controller
 {
     public function add($name_ofnew, $name_description, $link_img)

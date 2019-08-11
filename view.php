@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="others/style.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <title>View</title>
 </head>
@@ -17,9 +17,8 @@
 include('const.php');
 $db_conn = new PDO('mysql:host=localhost;dbname=' . DB_CONNECTION_DB, DB_CONNECTION_USER, DB_CONNECTION_PASS);
 $shedule = $db_conn->query('SELECT * FROM shedule');
-while ($row = $shedule->fetch())
-{
-    $arr[]=$row;
+while ($row = $shedule->fetch()) {
+    $arr[] = $row;
 }
 ?>
 <table class="table table-striped table-bordered table-hover">
@@ -38,20 +37,20 @@ while ($row = $shedule->fetch())
     </tr>
     </thead>
     <tbody>
-    <? foreach ($arr as $row):?>
+    <? foreach ($arr as $row): ?>
         <tr>
-            <td><?=$row['time']?></td>
-            <td><?=$row['monday']?></td>
-            <td><?=$row['tuesday']?></td>
-            <td><?=$row['wednesday']?></td>
-            <td><?=$row['thursday']?></td>
-            <td><?=$row['friday']?></td>
-            <td><?=$row['saturday']?></td>
-            <td> <?=$row['sunday']?></td>
-            <td><a href= "edit.php?id=<?=$row['id']?>">Редактировать</a></td>
-            <td><a href= "delete.php?id=<?=$row['id']?>">Удалить</a></td>
+            <td><?= $row['time'] ?></td>
+            <td><?= $row['monday'] ?></td>
+            <td><?= $row['tuesday'] ?></td>
+            <td><?= $row['wednesday'] ?></td>
+            <td><?= $row['thursday'] ?></td>
+            <td><?= $row['friday'] ?></td>
+            <td><?= $row['saturday'] ?></td>
+            <td> <?= $row['sunday'] ?></td>
+            <td><a href="edit.php?id=<?= $row['id'] ?>">Редактировать</a></td>
+            <td><a href="delete.php?id=<?= $row['id'] ?>">Удалить</a></td>
         </tr>
-    <? endforeach;?>
+    <? endforeach; ?>
     </tbody>
 
 </table>

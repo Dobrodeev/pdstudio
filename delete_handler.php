@@ -4,4 +4,4 @@ $db_conn = new PDO('mysql:host=localhost;dbname=' . DB_CONNECTION_DB, DB_CONNECT
 $param = 'DELETE FROM shedule WHERE id="' . $_GET['id'] . '"';
 $db_conn->query($param);
 header('Location: /');
-?>
+
